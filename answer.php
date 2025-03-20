@@ -44,6 +44,9 @@
           ?>
         </div>
       </div>
+      <div class="page-content-return">
+        <a href="./index.php">Return ...</a>
+      </div>
     </main>
   </div>
 </body>
