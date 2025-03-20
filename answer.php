@@ -29,28 +29,20 @@
       <div class="right-image">
         <img src="./images/area_of_trinagle.png" alt="triangle image" width="250" />
       </div>
-      <br />
-      <div class="page-content">Enter the length and width in cm.</div>
       <div class="page-content-php">
-        <form action="answer.php" method="GET">
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type=" text" pattern="-?[0-9]*(\.[0-9]+)?" name="length-of-triangle">
-            <label class="mdl-textfield__label" for="length-of-triangle">Length of retangle (cm)</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-          <br />
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type=" text" pattern="-?[0-9]*(\.[0-9]+)?" name="width-of-triangle">
-            <label class="mdl-textfield__label" for="width-of-triangle">Width of triangle (cm)</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-          <br />
-          <!-- Accent-colored raised button with ripple -->
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-            type="submit">
-            Calculate
-          </button>
-        </form>
+        <div id="user-info">
+          <?php
+          $lengthOfTriangle = $_GET["length-of-triangle"];
+          $widthOfTriangle = $_GET["width-of-triangle"];
+          // process
+          $area = ($lengthOfTriangle * $widthOfTriangle) / 2;
+          // output
+          echo "If a triangle has length = " . $lengthOfTriangle . " cm and the width = " . $widthOfTriangle . " cm:";
+          echo "<br />";
+          echo "<br />";
+          echo "The area of a triangle is " . $area . " cm².";
+          ?>
+        </div>
       </div>
     </main>
   </div>
